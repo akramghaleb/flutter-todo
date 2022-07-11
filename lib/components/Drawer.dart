@@ -48,7 +48,8 @@ class Akram_Drawer extends StatelessWidget {
                   style: TextStyle(color: Akram_Data.appColor1 , fontFamily: 'AvenirArabic'),
                 ),
                 onTap: () {
-                  Navigator.of(context).pop();
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
                 },
               ),
               ListTile(
@@ -61,7 +62,7 @@ class Akram_Drawer extends StatelessWidget {
                   style: TextStyle(color: Akram_Data.appColor1),
                 ),
                 onTap: () {
-
+                  Navigator.pushNamed(context, '/create');
                 },
               ),
 
