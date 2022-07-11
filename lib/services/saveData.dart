@@ -2,6 +2,8 @@
 
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_todo/models/Akram_Data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Saved_Data{
@@ -11,15 +13,16 @@ class Saved_Data{
     await prefs.setString('all_tasks', d);
   }
 
-  static Future<List<dynamic>> get_data() async {
+  static Future<void> get_data() async {
     final prefs = await SharedPreferences.getInstance();
     String all_tasks = '';
     all_tasks = (prefs.getString('all_tasks') != null ?prefs.getString('all_tasks'):'')!;
     print (all_tasks);
     if(all_tasks != ''){
-      return json.decode(all_tasks);
+      Akram_Data.all_tasks = json.decode(all_tasks) as List<dynamic>;
+      //return json.decode(all_tasks);
     }else{
-      return [];
+      //return [];
     }
   }
 }

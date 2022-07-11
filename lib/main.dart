@@ -6,7 +6,7 @@ import 'package:flutter_todo/routes.dart';
 import 'package:flutter/cupertino.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Akram_Data.all_tasks = await Saved_Data.get_data() as List<dynamic>;
+  await Saved_Data.get_data();
   runApp(ExampleApp());
 }
 class ExampleApp extends StatelessWidget {

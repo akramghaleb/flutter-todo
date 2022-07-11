@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               // dragging from top to bottom
               if (start < current) {
                 int end = current - 1;
-                Map<String, String> startItem = Akram_Data.all_tasks[start];
+                dynamic startItem = Akram_Data.all_tasks[start];
                 int i = 0;
                 int local = start;
                 do {
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               }
               // dragging from bottom to top
               else if (start > current) {
-                Map<String, String> startItem = Akram_Data.all_tasks[start];
+                dynamic startItem = Akram_Data.all_tasks[start];
                 for (int i = start; i > current; i--) {
                   Akram_Data.all_tasks[i] = Akram_Data.all_tasks[i - 1];
                 }
