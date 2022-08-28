@@ -5,7 +5,7 @@ Flutter todo
 - You can add & update & delete tasks
 - You can order your tasks
 - Data saved for you after the app closing
-- If you like this work you can <a href="https://github.com/akramdev-ye">see more here</a>
+- If you like this work you can <a href="https://github.com/akramghaleb">see more here</a>
 <br>
 
 | Home Screen | Create Screen |
